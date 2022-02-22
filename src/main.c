@@ -190,6 +190,8 @@ int main(int argc, char** argv) {
 		}
 		fclose(outfile);
 		
+		printf("Wrote %d lines to file %s\n", row_count + 1, filename);
+		
 		if (filename != argv[1]) free(filename);
 	}
 	return 0;
