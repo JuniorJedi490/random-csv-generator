@@ -28,9 +28,10 @@ void invalid_column_message(int index, char* arg) {
 }
 
 void help_message(FILE* outfile) {
-	fputs("Usage: random-csv-generator [filename] [column1] [...] [#rows] [seed]", outfile);
+	fputs("Usage: random-csv-generator [filename] [col1type] [col1header] [col2type] [...] [#rows] [seed]", outfile);
 	fputs("  filename - the file extension will be .csv if it isn't already", outfile);
-	fputs("  columns - one of the following characters, followed by a string for the header", outfile);
+	fputs("  column header - a string", outfile);
+	fputs("  column type - one of the following characters", outfile);
 	fputs("    f - float", outfile);
 	fputs("    i - integer", outfile);
 	fputs("    b - boolean", outfile);
