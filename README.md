@@ -3,13 +3,13 @@ A command line utility for generating CSV files with random data, for the purpos
 
 Use it like this:
 ```
-random-csv-generator filename column1 ... #rows seed
+random-csv-generator [filename] [column1] [...] [#rows] [seed]
 ```
 - filename and #rows are self explanatory
 - seed is the seed for the random number generator
 - columns are entered in this format:
 ```
-type header
+[type] [header]
 ```
 - header is the name of the data series
 - type is one of f, i, b, s, or p, and has the following behavior:
@@ -19,10 +19,7 @@ type header
    - b - fills the column with the string representation of TRUE/FALSE values
    - s - fills the column with strings with a length from 5 to 10
 
-As an example, this command:
+As an example, the output in out.csv was generated using this command:
 ```
 random-csv-generator.exe out i "Participant ID" s Name b "Participant Paid" f "Amount Paid" b "Response Received" p Response 100 1337
 ```
-generates this output:
-
-![csv](out.csv)
